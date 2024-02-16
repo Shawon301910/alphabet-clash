@@ -1,8 +1,15 @@
-function starting() {
-    const home = document.getElementById('home');
-    home.classList.add('hidden')
+function gaming() {
+    hideElementById('home');
+    showElementById('playground');
+    playing();
+}
 
-    const playground = document.getElementById('playground');
-    playground.classList.remove('hidden')
-    playground.classList.add('flex')
+function playing() {
+    const alphabet = randomAlphabet();
+
+    const getAlphabet = document.getElementById('change-alphabet');
+    getAlphabet.innerText = alphabet;
+
+    const bgColor = setBgColor(alphabet);
+    return bgColor;
 }
